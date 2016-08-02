@@ -47,4 +47,6 @@ Use this to specify key:
 
 merged_all = pd.merge(merged, w3, left_on = "FULL NAME1", right_on = "FULL NAME2" )
 
+This is *emphasized* _text_.
+
 
