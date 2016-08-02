@@ -39,11 +39,11 @@ df = df.drop('First Name_x', 1)
 
 #Merging data
 
-###Simple merge, this is if keys in w1 and w1 are the same:
+###Simple merge, if keys in w1 and w1 are the same:
 
 merged = pd.merge(w1, w2)
 
-###Use this to specify key:
+###If not same,  specify the key:
 
 merged_all = pd.merge(merged, w3, left_on = "FULL NAME1", right_on = "FULL NAME2" )
 
