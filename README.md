@@ -16,7 +16,7 @@ df["Address"] = df["Address"].map(str.strip)
 
 #String Commands
 
-Convert column fro strings:
+Convert column to strings:
 
 df["Notes"] = df["Notes"].astype(str)
 
