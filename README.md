@@ -30,3 +30,10 @@ df['result'] = df['result'].map(lambda x: x.lstrip('+-').rstrip('aAbBcC'))
 Strip white space from leading and trailing edge:
 
 df["Address"] = df["Address"].map(str.strip)
+
+#Drop Columns
+
+By column name:
+
+df = df.drop('First Name_x', 1)
+
