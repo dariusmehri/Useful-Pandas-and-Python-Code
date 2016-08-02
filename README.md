@@ -43,10 +43,10 @@ Simple merge, this is if keys in w1 and w1 are the same:
 
 merged = pd.merge(w1, w2)
 
-Use this to specify key:
+*Use this to specify key:*
 
 merged_all = pd.merge(merged, w3, left_on = "FULL NAME1", right_on = "FULL NAME2" )
 
-This is *emphasized* _text_.
+
 
 
