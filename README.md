@@ -19,7 +19,7 @@ df["Notes"] = df["Notes"].map(str.lower)
 
 ##Stripping Strings: 
 
-###Strips all numbers from column of strings:
+###Strips all numbers from strings in dataframe column:
 
 df['Last Name'] = df['Last Name'].map(lambda x: x.strip('0123456789'))
 
