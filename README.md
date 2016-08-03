@@ -31,11 +31,17 @@ df['result'] = df['result'].map(lambda x: x.lstrip('+-').rstrip('aAbBcC'))
 
 df["Address"] = df["Address"].map(str.strip)
 
-#Drop Columns
+#Drop Columns and Duplicates
 
 ###By column name:
 
 df = df.drop('First Name_x', 1)
+
+###Drop duplicates and reset index:
+
+df = df.drop_duplicates(['Group2']).reset_index(drop=True)
+
+*Note: Always reset index after droping
 
 #Merging data
 
@@ -53,11 +59,8 @@ merged_all = pd.merge(merged, w3, left_on = "FULL NAME1", right_on = "FULL NAME2
 
 pd.set_option('chained_assignment', None)
 
-#Drop Duplicates
 
-###Drop duplicates and reset index:
 
-df = df.drop_duplicates(['Group2']).reset_index(drop=True)
 
 
 
