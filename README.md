@@ -45,7 +45,7 @@ df = df.drop_duplicates(['Group2']).reset_index(drop=True)
 
 #Merging data
 
-###Simple merge, if keys in w1 and w1 are the same:
+###Simple merge, if keys in w1 and w2 are the same:
 
 merged = pd.merge(w1, w2)
 
