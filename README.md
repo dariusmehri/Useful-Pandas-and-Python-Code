@@ -17,7 +17,7 @@ df["Notes"] = df["Notes"].map(str.lower)
 *Can also use .upper*
 
 
-##Stripping: 
+##Stripping Strings: 
 
 ###Strips all numbers from column of strings:
 
