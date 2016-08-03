@@ -53,6 +53,11 @@ merged_all = pd.merge(merged, w3, left_on = "FULL NAME1", right_on = "FULL NAME2
 
 pd.set_option('chained_assignment', None)
 
+#Drop Duplicates
+
+###Drop duplicates and reset index:
+
+df = df.drop_duplicates(['Group2']).reset_index(drop=True)
 
 
 
