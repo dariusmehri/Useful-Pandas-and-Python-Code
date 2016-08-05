@@ -3,6 +3,9 @@
 #Read and Write Data
 
 ###Read CSV
+import pandas as pd
+import numpy as np
+
 df = pd.read_csv("...file_name.csv")
 
 
