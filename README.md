@@ -69,7 +69,7 @@ merged = pd.merge(w1, w2)
 
 merged_all = pd.merge(merged, w3, left_on = "FULL NAME1", right_on = "FULL NAME2" )
 
-###Contatanate 
+###Concatinate 
 
 frames = [df1, df2]
 
