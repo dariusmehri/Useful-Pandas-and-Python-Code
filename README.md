@@ -1,5 +1,9 @@
 # Useful Pandas Commands
 
+#Read and Write Data
+
+####Read
+df = pd.read_csv("...file_name.csv")
 
 
 #String Commands
