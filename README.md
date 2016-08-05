@@ -59,6 +59,10 @@ df = df.rename(columns={'Org.Level.4': 'org_level_4', 'Org.Level.4.Number': 'org
 
 dfn['Boro'] =  dfn['Boro'].str.replace('BRO', 'BROOKLYN')
 
+###Fill NaN with zeros
+
+df = df.fillna(0)
+
 #Merging data
 
 ###Simple merge, if keys in w1 and w2 are the same:
