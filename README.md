@@ -2,7 +2,7 @@
 
 #Read and Write Data
 
-####Read
+###Read CSV
 df = pd.read_csv("...file_name.csv")
 
 
