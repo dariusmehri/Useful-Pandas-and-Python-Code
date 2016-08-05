@@ -39,7 +39,7 @@ df['result'] = df['result'].map(lambda x: x.lstrip('+-').rstrip('aAbBcC'))
 
 df["Address"] = df["Address"].map(str.strip)
 
-#Drop Columns and Duplicates, Rename Columns
+#Drop Columns and Duplicates, Rename Columns and Elements
 
 ###By column name:
 
@@ -54,6 +54,10 @@ df = df.drop_duplicates(['Group2']).reset_index(drop=True)
 ###Renaming Columns
 
 df = df.rename(columns={'Org.Level.4': 'org_level_4', 'Org.Level.4.Number': 'org_level_4_number'})
+
+###Rename Elements
+
+dfn['Boro'] =  dfn['Boro'].str.replace('BRO', 'BROOKLYN')
 
 #Merging data
 
