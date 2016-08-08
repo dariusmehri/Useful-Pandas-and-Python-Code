@@ -54,6 +54,10 @@ df = df.drop_duplicates(['Group2']).reset_index(drop=True)
 
 *Note: Always reset index after droping
 
+###Just reset index
+
+df = df.reset_index(drop=True)
+
 ###Renaming Columns
 
 df = df.rename(columns={'Org.Level.4': 'org_level_4', 'Org.Level.4.Number': 'org_level_4_number'})
