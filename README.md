@@ -82,6 +82,16 @@ frames = [df1, df2]
 
 result = pd.concat(frames)
 
+###Create DF and add rows of data
+
+qn = pd.DataFrame(columns=('BIN', 'Boro Code', 'Boro', 'House Number', 'Street Name', 'Address', 'Latitude', 'Longitude'))
+
+qn.loc[0] = ['NA','NA','NA', 'NA','NA','NA', 'NA','NA']
+
+qn.loc[1] = ['NA','NA','NA', 'NA','NA','NA', 'NA','NA']
+
+Note: Number of columns must match
+
 #Loops and Assignments
 
 ###Turn chain assignments off:
