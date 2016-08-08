@@ -9,8 +9,11 @@ import numpy as np
 
 df = pd.read_csv("...file_name.csv")
 
+###Get data types:
+df.dtypes
 
-#String Commands
+
+#String
 
 ###Convert column to strings:
 
