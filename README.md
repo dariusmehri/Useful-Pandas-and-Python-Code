@@ -88,6 +88,12 @@ result = pd.concat(frames)
 
 pd.set_option('chained_assignment', None)
 
+#Subsetting
+
+geoCodeCheck = geoCodeCheck[geoCode['Street Name'] == 'knickerbocker avenue']
+
+
+
 
 
 
