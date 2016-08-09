@@ -107,6 +107,12 @@ pd.set_option('chained_assignment', None)
 geoCodeCheck = geoCodeCheck[geoCode['Street Name'] == 'knickerbocker avenue']
 
 
+#Sort and reindex
+
+####Sort by high risk ranking and reindex
+
+export = export.sort_values(by = 'High Risk Ranking', ascending=False).reset_index(drop=False) 
+
 
 
 
