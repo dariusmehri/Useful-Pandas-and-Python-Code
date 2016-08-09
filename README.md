@@ -42,6 +42,16 @@ df['result'] = df['result'].map(lambda x: x.lstrip('+-').rstrip('aAbBcC'))
 
 df["Address"] = df["Address"].map(str.strip)
 
+###Strip using special characters:
+
+line = "59-35"
+
+import re
+
+line = re.sub('[-]', '', line)
+
+*Output: 5935*
+
 #Drop Columns and Duplicates, Rename Columns and Elements
 
 ###By column name:
