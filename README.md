@@ -67,6 +67,10 @@ df = df.drop_duplicates(['Group2']).reset_index(drop=True)
 
 *Note: Always reset index after droping
 
+###Drop based on more than one field:
+
+df = df.drop_duplicates(subset=['Address', 'Boro']).reset_index(drop=True)
+
 ###Just reset index
 
 df = df.reset_index(drop=True)
