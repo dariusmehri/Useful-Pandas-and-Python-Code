@@ -83,6 +83,13 @@ dfn['Boro'] =  dfn['Boro'].str.replace('BRO', 'BROOKLYN')
 
 df = df.fillna(0)
 
+###Drop row based on element type:
+
+df = df[df["BORO"] != 0]
+
+*drops all rows with 0*
+
+
 #Merging data
 
 ###Simple merge, if keys in w1 and w2 are the same:
