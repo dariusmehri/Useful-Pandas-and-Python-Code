@@ -139,6 +139,9 @@ geoCodeCheck = geoCodeCheck[geoCode['Street Name'] == 'knickerbocker avenue']
 
 export = export.sort_values(by = 'High Risk Ranking', ascending=False).reset_index(drop=False) 
 
+#From List to Dataframe:
+
+df = pd.DataFrame(dfList, columns=['BIN', 'Boro', 'Address'])
 
 
 
