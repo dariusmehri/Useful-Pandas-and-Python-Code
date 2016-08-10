@@ -71,6 +71,8 @@ df = df.drop_duplicates(['Group2']).reset_index(drop=True)
 
 df = df.drop_duplicates(subset=['Address', 'Boro']).reset_index(drop=True)
 
+*drops rows where address and borough are the same*
+
 ###Just reset index
 
 df = df.reset_index(drop=True)
