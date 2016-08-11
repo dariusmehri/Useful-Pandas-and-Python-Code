@@ -95,7 +95,12 @@ df = df[df["BORO"] != 0]
 
 *drops all rows with 0*
 
-### Drop NaN using is finite:
+### Drop NaN using dropna:
+df = df.dropna()
+
+*this drops all rows with NaN*
+
+### Drop NaN using is finite (numeric data):
 
 df = df[np.isfinite(df['House Number'])]
 
