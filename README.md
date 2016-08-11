@@ -95,6 +95,9 @@ df = df[df["BORO"] != 0]
 
 *drops all rows with 0*
 
+### Drop NaN using is finite:
+
+df = df[np.isfinite(df['House Number'])]
 
 #Merging data
 
