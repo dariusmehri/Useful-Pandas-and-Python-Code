@@ -95,11 +95,13 @@ df = df.fillna(0)
 
 df = df[df["BORO"] != 0]
 
+*drops all rows with 0*
+
 ###Drop row if contain string:
 
 df2 = df2[df2.Address.str.contains("WEST END AVE") == False]
 
-*drops all rows with 0*
+*drops all rows in Address field if contain WEST END AVE*
 
 ### Drop NaN using dropna:
 df = df.dropna()
