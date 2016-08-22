@@ -55,6 +55,8 @@ line = re.sub('[-]', '', line)
 
 *Output: 5935*
 
+
+
 #Drop Columns and Duplicates, Rename Columns and Elements
 
 ###By column name:
@@ -67,7 +69,7 @@ df = df.drop_duplicates(['Group2']).reset_index(drop=True)
 
 *Note: Always reset index after droping
 
-###Drop based on more than one field:
+###Drop duplicates based on more than one field:
 
 df = df.drop_duplicates(subset=['Address', 'Boro']).reset_index(drop=True)
 
@@ -92,6 +94,10 @@ df = df.fillna(0)
 ###Drop row based on element type:
 
 df = df[df["BORO"] != 0]
+
+###Drop row if contain string:
+
+df2 = df2[df2.Address.str.contains("WEST END AVE") == False]
 
 *drops all rows with 0*
 
