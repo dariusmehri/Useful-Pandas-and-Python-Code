@@ -55,7 +55,13 @@ line = re.sub('[-]', '', line)
 
 *Output: 5935*
 
+###Stripping out numbers:
 
+str = "h3110 23 cat 444.4 rabbit 11 2 dog"
+
+str2 = [int(s) for s in str.split() if s.isdigit()]
+
+*ouptut: [23, 11, 2]*
 
 #Drop Columns and Duplicates, Rename Columns and Elements
 
