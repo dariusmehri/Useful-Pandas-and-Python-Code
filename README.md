@@ -63,6 +63,13 @@ str2 = [int(s) for s in str.split() if s.isdigit()]
 
 *ouptut: [23, 11, 2]*
 
+###Stripping out numbers, method 2
+
+st = '132ND'
+st = ''.join(c for c in st if c.isdigit())
+
+*output: 132
+
 #Drop Columns and Duplicates, Rename Columns and Elements
 
 ###By column name:
