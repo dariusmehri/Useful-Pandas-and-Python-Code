@@ -66,6 +66,7 @@ str2 = [int(s) for s in str.split() if s.isdigit()]
 ###Stripping out numbers, method 2
 
 st = '132ND'
+
 st = ''.join(c for c in st if c.isdigit())
 
 *output: 132
