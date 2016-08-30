@@ -173,6 +173,20 @@ export = export.sort_values(by = 'High Risk Ranking', ascending=False).reset_ind
 
 df = pd.DataFrame(dfList, columns=['BIN', 'Boro', 'Address'])
 
+#Lists and Sets
+
+###Create a list
+list_block = []
+    
+    for i in range(0, len(df2)):
+        list_block.append(df2["Block"][i])
+   
+   ###Create a set from a list     
+    set_block = set(list_block)
+  
+  ###Sort the set
+    set_block = sorted(set_block)
+
 
 
 
