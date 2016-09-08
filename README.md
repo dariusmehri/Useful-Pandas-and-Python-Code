@@ -191,35 +191,7 @@ list_block = []
 
 #Splitting
 
-0                 HUN
-1                 ESP
-2                 GBR
-3                 ESP
-4                 FRA
-5             ID, USA
-6             GA, USA
-7    Hoboken, NJ, USA
-8             NJ, USA
-9                 AUS
+###This splits city, state and country data that is on one line seperated by comma into three columns
 
 location_df = df['City, State, Country'].apply(lambda x: pd.Series(x.split(',')))
-
-###Creates:
-
- 0       1       2
-0    HUN     NaN     NaN
-1    ESP     NaN     NaN
-2    GBR     NaN     NaN
-3    ESP     NaN     NaN
-4    FRA     NaN     NaN
-5    ID      USA     NaN
-6    GA      USA     NaN
-7    Hoboken  NJ     USA
-8    NJ      USA     NaN
-9    AUS     NaN     NaN
-
-
-
-
-
 
