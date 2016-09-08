@@ -197,13 +197,17 @@ location_df = df['h_no'].apply(lambda x: pd.Series(x.split(',')))
 
 ###Want to know if address one in df1 matches df2, if so tag the address
 
+*Create a list of matching addresses in the dataframes:*
+
 common_cols = list(set(df14.Address) & set(dfmn.Address))
 
-*Creates a list of matching addresses in the dataframes*
 
 dfmn["Corner"] = 0
+
 for i in range(0, len(dfmn)):
+
     if dfmn["Address"][i] in common_cols:
+    
         dfmn["Corner"][i] = 1
         
         
