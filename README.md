@@ -206,9 +206,11 @@ dfmn["Corner"] = 0
 
 dfmn["Corner"] = 0
 
+
 for i in range(0, len(dfmn)):
 
     if dfmn["Address"][i] in common_cols:
+    
         dfmn["Corner"][i] = 1
         
         
