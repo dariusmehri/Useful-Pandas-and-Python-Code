@@ -189,9 +189,22 @@ list_block = []
     set_block = sorted(set_block)
 
 
-#Splitting
+#Splitting and String Comparison with Two Dataframes
 
-###This splits city, state and country data that is on one line seperated by comma into three columns
+###This splits house number with "-" into two columns
 
-location_df = df['City, State, Country'].apply(lambda x: pd.Series(x.split(',')))
+location_df = df['h_no'].apply(lambda x: pd.Series(x.split(',')))
+
+###Want to know if address one in df1 matches df2, if so tag the address
+
+common_cols = list(set(df14.Address) & set(dfmn.Address))
+
+*Creates a list of matching addresses in the dataframes*
+
+dfmn["Corner"] = 0
+for i in range(0, len(dfmn)):
+    if dfmn["Address"][i] in common_cols:
+        dfmn["Corner"][i] = 1
+        
+        
 
