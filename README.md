@@ -215,3 +215,9 @@ for i in range(0, len(dfmn)):
         
         
 
+#Groupby 
+
+####Add the total leave hours per person in new column called 'Correct Duration Sum'
+
+
+lv['Correct Duration Sum'] = lv['Correct Duration'].groupby(lv['CityTime ID']).transform('sum')
