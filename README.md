@@ -162,6 +162,12 @@ pd.set_option('chained_assignment', None)
 
 geoCodeCheck = geoCodeCheck[geoCode['Street Name'] == 'knickerbocker avenue']
 
+###Subset  streets bounded by left and right x coord using mask
+
+mask = (dfList['XCoord'] >= xy2[0]) & (dfList['YCoord'] <= xy1[0])
+
+dfList_subset = dfList.loc[mask]
+
 
 #Sort and reindex
 
