@@ -175,6 +175,15 @@ dfList_subset = dfList.loc[mask]
 
 export = export.sort_values(by = 'High Risk Ranking', ascending=False).reset_index(drop=False) 
 
+
+####Sort and keep only those with duplicates
+
+ids = dfInt["NODEID"]
+
+dfInt2 = dfInt[ids.isin(ids[ids.duplicated()])].sort_values(by="NODEID")
+
+
+
 #From List to Dataframe:
 
 df = pd.DataFrame(dfList, columns=['BIN', 'Boro', 'Address'])
