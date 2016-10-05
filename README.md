@@ -236,3 +236,12 @@ for i in range(0, len(dfmn)):
 
 
 lv['Correct Duration Sum'] = lv['Correct Duration'].groupby(lv['CityTime ID']).transform('sum')
+
+#Datetime
+
+### Get the difference in days
+d = df2["Variance End Date"][j] - df2["Variance Start Date"][j]
+
+diff = d.days
+
+diff = int(diff)
