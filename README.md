@@ -75,7 +75,6 @@ st = ''.join(c for c in st if c.isdigit())
 
 dfstaff["Name"] =  dfstaff["Name"].str.replace('[^\x00-\x7F]','')
 
-
 #Drop Columns and Duplicates, Rename Columns and Elements
 
 ###By column name:
