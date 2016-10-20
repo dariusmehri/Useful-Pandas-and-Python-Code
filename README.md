@@ -249,3 +249,10 @@ d = df2["Variance End Date"][j] - df2["Variance Start Date"][j]
 diff = d.days
 
 diff = int(diff)
+
+#Data Frame Math Calculations
+
+###Sum values in dataframe:
+
+sum_trans = df3["Transaction Amount"].sum()
+
