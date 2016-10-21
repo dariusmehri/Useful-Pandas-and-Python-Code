@@ -241,7 +241,7 @@ for i in range(0, len(dfmn)):
 
 lv['Correct Duration Sum'] = lv['Correct Duration'].groupby(lv['CityTime ID']).transform('sum')
 
-###Sums by BIN and then year and sums up all of the other numeric variables:
+####Sums by BIN and then year and sums up all of the other numeric variables:
 
 qnG = qn.groupby(['BIN', 'Year']).sum()
 
