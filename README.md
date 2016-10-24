@@ -39,6 +39,11 @@ df['Last Name'] = df['Last Name'].map(lambda x: x.strip('0123456789'))
 
 ###Or, just from left and right:
 
+### Get min mor max in dataframe column:
+
+df2["EucDistance"].min()
+
+
 df['result'] = df['result'].map(lambda x: x.lstrip('+-').rstrip('aAbBcC'))
 
 ###Strip white space from leading and trailing edge:
