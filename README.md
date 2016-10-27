@@ -75,6 +75,12 @@ st = ''.join(c for c in st if c.isdigit())
 
 dfstaff["Name"] =  dfstaff["Name"].str.replace('[^\x00-\x7F]','')
 
+### Remove the last element (or word) in a text string:
+
+text = '272-276 Broadway New York NY 10007'
+
+text.rsplit(' ', 1)[0]
+
 #Drop Columns and Duplicates, Rename Columns and Elements
 
 ###By column name:
