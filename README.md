@@ -30,6 +30,16 @@ df["Notes"] = df["Notes"].map(str.lower)
 
 *Can also use .upper*
 
+###Fuzzy logic string comparison:
+
+s1 = "3243 IRWIN AVENUE BRONX" 
+ 
+s2 = "3253 IRWIN AVENUE BRONX"
+
+ratio =  SM(None, s1, s2).ratio()
+
+####Returns a score based on similarity
+
 
 ##Stripping Strings: 
 
