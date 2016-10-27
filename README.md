@@ -40,7 +40,7 @@ ratio =  SM(None, s1, s2).ratio()
 
 ####Returns a score based on similarity
 
-###Fuzz logic explicit word matching:
+###Fuzzy logic explicit word matching:
 
 s1 = 'Alphonso Marshall'
 
@@ -58,7 +58,7 @@ else:
 
     print "False, not same person"
 
-###This prints out True
+####This prints out True
 
 ##Stripping Strings: 
 
