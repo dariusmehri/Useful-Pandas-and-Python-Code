@@ -32,6 +32,8 @@ df["Notes"] = df["Notes"].map(str.lower)
 
 ###Fuzzy logic string comparison:
 
+from difflib import SequenceMatcher as SM
+
 s1 = "3243 IRWIN AVENUE BRONX" 
  
 s2 = "3253 IRWIN AVENUE BRONX"
