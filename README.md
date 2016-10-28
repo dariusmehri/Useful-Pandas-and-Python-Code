@@ -214,6 +214,10 @@ dfList_subset = dfList.loc[mask]
 
 export = export.sort_values(by = 'High Risk Ranking', ascending=False).reset_index(drop=False) 
 
+####Sort python list, from high to low:
+
+sorted(ratio_list, reverse=True)
+
 
 ####Sort and keep only those with duplicates
 
