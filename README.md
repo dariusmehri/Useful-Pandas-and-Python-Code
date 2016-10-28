@@ -227,6 +227,12 @@ ids = dfInt["NODEID"]
 
 dfInt2 = dfInt[ids.isin(ids[ids.duplicated()])].sort_values(by="NODEID")
 
+#### Sort a list of list, first item is string, second item is numeric:
+
+from operator import itemgetter
+
+ratio_list = sorted(ratio_list, key=itemgetter(1), reverse=True)
+
 
 
 #From List to Dataframe:
