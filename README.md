@@ -38,6 +38,8 @@ s1 = "3243 IRWIN AVENUE BRONX"
  
 s2 = "3253 IRWIN AVENUE BRONX"
 
+
+
 ratio =  SM(None, s1, s2).ratio()
 
 ####Returns a score based on similarity
@@ -315,5 +317,15 @@ sum_trans = df3["Transaction Amount"].sum()
 
 df2["EucDistance"].min()
 
+
+#Useful Websites:
+
+####12 Useful Pandas Commands
+
+https://www.analyticsvidhya.com/blog/2016/01/12-pandas-techniques-python-data-manipulation/
+
+####Pivoting in Pandas:
+
+http://pandas.pydata.org/pandas-docs/stable/reshaping.html
 
 
