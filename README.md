@@ -261,6 +261,14 @@ list_block = []
 
 a = filter(None, a)
 
+### Replacing elements in list using list comprehension
+
+a=[1,"",3,1,3,2,1,1]
+
+a = ["NA" if x=="" else x for x in a]
+
+####Replaces empty elements with 'NA'
+
 #Splitting and String Comparison with Two Dataframes
 
 ###This splits house number with "-" into two columns
