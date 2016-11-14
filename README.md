@@ -257,7 +257,7 @@ list_block = []
     set_block = sorted(set_block)
 
 
-#Remove empty elements in list:
+###Remove empty elements in list:
 
 a = filter(None, a)
 
