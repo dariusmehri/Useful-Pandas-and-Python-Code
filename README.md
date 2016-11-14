@@ -312,6 +312,11 @@ qnG = qnG.add_suffix('_Count').reset_index()
 
 #Datetime
 
+###Convert date into pandas datetime:
+
+df['DATE_SCHEDULED'] = pd.to_datetime(df['DATE_SCHEDULED'])
+
+
 ### Get the difference in days
 d = df2["Variance End Date"][j] - df2["Variance Start Date"][j]
 
