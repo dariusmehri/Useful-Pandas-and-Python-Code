@@ -257,6 +257,10 @@ list_block = []
     set_block = sorted(set_block)
 
 
+#Remove empty elements in list:
+
+a = filter(None, a)
+
 #Splitting and String Comparison with Two Dataframes
 
 ###This splits house number with "-" into two columns
