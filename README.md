@@ -116,6 +116,10 @@ text.rsplit(' ', 1)[0]
 
 #Drop Columns and Duplicates, Rename Columns and Elements
 
+###Count the total NaN in dataframe:
+
+df.isnull().sum()
+
 ###By column name:
 
 df = df.drop('First Name_x', 1)
