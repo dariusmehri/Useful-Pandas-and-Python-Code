@@ -333,6 +333,16 @@ diff = d.days
 
 diff = int(diff)
 
+###Subset with date time and masking:
+
+start_time = str(lv["Start Time"][i].month) + '-' + str(lv["Start Time"][i].day) + '-' + str(lv["Start Time"][i].year)
+ 
+end_time = str(lv["End Time"][i].month) + '-' + str(lv["End Time"][i].day) + '-' + str(lv["End Time"][i].year)
+
+mask = (wd['workdays'] >= start_time) & (wd['workdays'] <= end_time)
+
+wd_subset = wd.loc[mask]
+
 #Data Frame Math Calculations
 
 ###Sum values in dataframe:
