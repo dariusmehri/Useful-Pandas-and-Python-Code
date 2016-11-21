@@ -314,6 +314,12 @@ qnG = qn.groupby(['BIN', 'Year']).sum()
 
 qnG = qnG.add_suffix('_Count').reset_index()
 
+
+####Groupby using sum and count of each variable:
+
+dfG = df.groupby('BIN_Number')['Job_Number', 'AHV_Grants', 'Initial_Da', 'Additional', 'Total_Days', 'Sum_Transa'].agg(['sum','count'])
+
+
 #Datetime
 
 ###Convert date into pandas datetime:
