@@ -315,10 +315,9 @@ qnG = qn.groupby(['BIN', 'Year']).sum()
 qnG = qnG.add_suffix('_Count').reset_index()
 
 
-####Groupby using sum and count of each variable:
+####Groupby, count number of jobs and sum all other variables:
 
-dfG = df.groupby('BIN_Number')['Job_Number', 'AHV_Grants', 'Initial_Da', 'Additional', 'Total_Days', 'Sum_Transa'].agg(['sum','count'])
-
+dfG = (df.groupby('BIN_Number').agg({'Job_Number':'count', 'AHV_Grants': 'sum', 'Initial_Da':'sum', 'Additional':'sum'}).reset_index().rename(columns={'Job_Number':'Job_Number_count'}) )
 
 #Datetime
 
