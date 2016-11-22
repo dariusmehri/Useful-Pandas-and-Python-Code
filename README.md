@@ -355,7 +355,7 @@ df2["EucDistance"].min()
 
 #Try
 
-for i in range(0, len(dfdn)):
+ for i in range(0, len(dfdn)):
 
     print "terracot address", dfdn["AddressMatch"][i]
     
