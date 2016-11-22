@@ -353,6 +353,18 @@ sum_trans = df3["Transaction Amount"].sum()
 
 df2["EucDistance"].min()
 
+#Try
+
+for i in range(0, len(dfdn)):
+
+    print "terracot address", dfdn["AddressMatch"][i]
+    
+    try: 
+        print "dic list", d2[dfdn["AddressMatch"][i]] 
+    except KeyError, e:
+        print e
+
+
 
 #Useful Websites:
 
