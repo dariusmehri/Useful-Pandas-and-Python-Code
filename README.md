@@ -252,7 +252,11 @@ list_block = []
     
     for i in range(0, len(df2)):
         list_block.append(df2["Block"][i])
-   
+
+###Create a list from dataframe column:
+
+dateList = df2['Date'].tolist()
+
    
 ###Create a set from a list     
     set_block = set(list_block)
