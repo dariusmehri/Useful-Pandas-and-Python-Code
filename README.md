@@ -363,7 +363,7 @@ df2["EucDistance"].min()
 
 dr.dtypes
 
-dr = dr.select_dtypes(exclude=['object', 'int64']) * 100
+dr[dr.select_dtypes(include=['float']).columns] *= 100
 
 #Try
 
