@@ -365,6 +365,10 @@ dr.dtypes
 
 dr[dr.select_dtypes(include=['float']).columns] *= 100
 
+####Round all numbers in df to two decimal places:
+
+dr = dr.round(2)
+
 #Try
 
     for i in range(0, len(dfdn)):
