@@ -347,7 +347,7 @@ mask = (wd['workdays'] >= start_time) & (wd['workdays'] <= end_time)
 
 wd_subset = wd.loc[mask]
 
-#Data Frame Math Calculations
+#Dataframe Math Calculations
 
 ###Sum values in dataframe:
 
@@ -356,6 +356,14 @@ sum_trans = df3["Transaction Amount"].sum()
 ### Get min mor max in dataframe column:
 
 df2["EucDistance"].min()
+
+###Multiply all floats by 100 to convert into percent
+
+####Get datatypes first then convert
+
+dr.dtypes
+
+dr = dr.select_dtypes(exclude=['object', 'int64']) * 100
 
 #Try
 
