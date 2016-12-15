@@ -1,4 +1,4 @@
-# Useful Pandas Commands
+# Useful Python and Pandas Commands and Scripts
 
 #Read and Write Data
 
