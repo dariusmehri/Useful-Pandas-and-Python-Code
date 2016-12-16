@@ -359,7 +359,7 @@ df2["EucDistance"].min()
 
 ###Summary stats, continuous vars only:
 
-df.describe()
+df.describe().transpose()
 
 ###Multiply all floats by 100 to convert into percent
 
