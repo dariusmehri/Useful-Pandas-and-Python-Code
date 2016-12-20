@@ -66,6 +66,10 @@ else:
 
 ##Stripping Strings: 
 
+### Get year from date that is in this format: 20101117:
+
+df['Initial File Year'] = df['Initial File Date Raw'].apply(lambda x: x[:4])
+
 ###Strips all numbers from strings in dataframe column:
 
 df['Last Name'] = df['Last Name'].map(lambda x: x.strip('0123456789'))
