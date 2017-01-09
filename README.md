@@ -377,6 +377,10 @@ dr[dr.select_dtypes(include=['float']).columns] *= 100
 
 dr = dr.round(2)
 
+#From df with fields "bin" and "WallArea SqFt"
+
+dwsDic = dwsG.set_index('bin')['WallArea SqFt'].to_dict()
+
 #Try
 
     for i in range(0, len(dfdn)):
