@@ -168,7 +168,7 @@ df2 = df2[df2.Address.str.contains("WEST END AVE") == False]
 
 *drops all rows in Address field if contain WEST END AVE*
 
-#Drop NaN, works for categorical variables:
+###Drop NaN, works for categorical variables:
 
 df = df[pd.notnull(df['Distressed'])]
 
