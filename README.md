@@ -82,6 +82,10 @@ df['result'] = df['result'].map(lambda x: x.lstrip('+-').rstrip('aAbBcC'))
 
 df["Address"] = df["Address"].map(str.strip)
 
+###Strip white spaces from leading and tailing edge in column
+
+dfn = dfn.rename(columns=lambda x: x.strip())
+
 ###Strip using special characters:
 
 line = "59-35"
