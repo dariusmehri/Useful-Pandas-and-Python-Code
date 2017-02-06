@@ -341,6 +341,9 @@ dfG = (df.groupby('BIN_Number').agg({'Job_Number':'count', 'AHV_Grants': 'sum', 
 
 df['DATE_SCHEDULED'] = pd.to_datetime(df['DATE_SCHEDULED'])
 
+### Remove time from datetime:
+
+db["DATE_INSPECTION"] = db["DATE_INSPECTION"].apply(lambda x: x.date())
 
 ### Get the difference in days
 d = df2["Variance End Date"][j] - df2["Variance Start Date"][j]
