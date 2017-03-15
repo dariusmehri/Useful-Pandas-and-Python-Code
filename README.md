@@ -226,6 +226,10 @@ mask = (dfList['XCoord'] >= xy2[0]) & (dfList['YCoord'] <= xy1[0])
 
 dfList_subset = dfList.loc[mask]
 
+###Subset using a list (this removes all rows of data not in list):
+
+df = df[df['Name'].isin(nameList)]
+
 
 #Sort and reindex
 
