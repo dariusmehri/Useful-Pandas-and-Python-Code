@@ -63,7 +63,7 @@ else:
 
 #### This prints out True
 
-##Stripping Strings: 
+## Stripping Strings: 
 
 ### Get year from date that is in this format: 20101117:
 
