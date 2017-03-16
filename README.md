@@ -1,7 +1,7 @@
 
-#Read and Write Data
+# Read and Write Data
 
-###Read CSV
+### Read CSV
 import pandas as pd
 
 import numpy as np
