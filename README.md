@@ -8,28 +8,28 @@ import numpy as np
 
 df = pd.read_csv("...file_name.csv")
 
-###Get data types:
+### Get data types:
 df.dtypes
 
-###Write csv:
+### Write csv:
 df.to_csv("...file_name.csv")
 
 
 #String
 
-###Convert column to strings:
+### Convert column to strings:
 
 df["Notes"] = df["Notes"].astype(str)
 
 *Can also use "int" and "float"*
 
-###Convert string to all lower case:
+### Convert string to all lower case:
 
 df["Notes"] = df["Notes"].map(str.lower)
 
 *Can also use .upper*
 
-###Fuzzy logic string comparison:
+### Fuzzy logic string comparison:
 
 from difflib import SequenceMatcher as SM
 
@@ -41,9 +41,9 @@ s2 = "3253 IRWIN AVENUE BRONX"
 
 ratio =  SM(None, s1, s2).ratio()
 
-####Returns a score based on similarity
+#### Returns a score based on similarity
 
-###Fuzzy logic explicit word matching:
+### Fuzzy logic explicit word matching:
 
 s1 = 'Alphonso Marshall'
 
@@ -61,7 +61,7 @@ else:
 
     print "False, not same person"
 
-####This prints out True
+#### This prints out True
 
 ##Stripping Strings: 
 
@@ -69,23 +69,23 @@ else:
 
 df['Initial File Year'] = df['Initial File Date Raw'].apply(lambda x: x[:4])
 
-###Strips all numbers from strings in dataframe column:
+### Strips all numbers from strings in dataframe column:
 
 df['Last Name'] = df['Last Name'].map(lambda x: x.strip('0123456789'))
 
-###Or, just from left and right:
+### Or, just from left and right:
 
 df['result'] = df['result'].map(lambda x: x.lstrip('+-').rstrip('aAbBcC'))
 
-###Strip white space from leading and trailing edge:
+### Strip white space from leading and trailing edge:
 
 df["Address"] = df["Address"].map(str.strip)
 
-###Strip white spaces from leading and tailing edge in column
+### Strip white spaces from leading and tailing edge in column
 
 dfn = dfn.rename(columns=lambda x: x.strip())
 
-###Strip using special characters:
+### Strip using special characters:
 
 line = "59-35"
 
@@ -95,7 +95,7 @@ line = re.sub('[-]', '', line)
 
 *Output: 5935*
 
-###Stripping out numbers:
+### Stripping out numbers:
 
 str = "h3110 23 cat 444.4 rabbit 11 2 dog"
 
@@ -103,7 +103,7 @@ str2 = [int(s) for s in str.split() if s.isdigit()]
 
 *ouptut: [23, 11, 2]*
 
-###Stripping out numbers, method 2
+### Stripping out numbers, method 2
 
 st = '132ND'
 
@@ -111,7 +111,7 @@ st = ''.join(c for c in st if c.isdigit())
 
 *output: 132
 
-###Stripping out special characters:
+### Stripping out special characters:
 
 dfstaff["Name"] =  dfstaff["Name"].str.replace('[^\x00-\x7F]','')
 
@@ -121,57 +121,57 @@ text = '272-276 Broadway New York NY 10007'
 
 text.rsplit(' ', 1)[0]
 
-#Drop Columns and Duplicates, Rename Columns and Elements
+# Drop Columns and Duplicates, Rename Columns and Elements
 
-###Count the total NaN in dataframe:
+### Count the total NaN in dataframe:
 
 df.isnull().sum()
 
-###By column name:
+### By column name:
 
 df = df.drop('First Name_x', 1)
 
-###Drop duplicates and reset index:
+### Drop duplicates and reset index:
 
 df = df.drop_duplicates(['Group2']).reset_index(drop=True)
 
 *Note: Always reset index after droping
 
-###Drop duplicates based on more than one field:
+### Drop duplicates based on more than one field:
 
 df = df.drop_duplicates(subset=['Address', 'Boro']).reset_index(drop=True)
 
 *drops rows where address and borough are the same*
 
-###Just reset index
+### Just reset index
 
 df = df.reset_index(drop=True)
 
-###Renaming Columns
+### Renaming Columns
 
 df = df.rename(columns={'Org.Level.4': 'org_level_4', 'Org.Level.4.Number': 'org_level_4_number'})
 
-###Rename Elements
+### Rename Elements
 
 dfn['Boro'] =  dfn['Boro'].str.replace('BRO', 'BROOKLYN')
 
-###Fill NaN with zeros
+### Fill NaN with zeros
 
 df = df.fillna(0)
 
-###Drop row based on element type:
+### Drop row based on element type:
 
 df = df[df["BORO"] != 0]
 
 *drops all rows with 0*
 
-###Drop row if contain string:
+### Drop row if contain string:
 
 df2 = df2[df2.Address.str.contains("WEST END AVE") == False]
 
 *drops all rows in Address field if contain WEST END AVE*
 
-###Drop NaN, works for categorical variables:
+### Drop NaN, works for categorical variables:
 
 df = df[pd.notnull(df['Distressed'])]
 
@@ -184,23 +184,23 @@ df = df.dropna()
 
 df = df[np.isfinite(df['House Number'])]
 
-#Merging data
+# Merging data
 
-###Simple merge, if keys in w1 and w2 are the same:
+### Simple merge, if keys in w1 and w2 are the same:
 
 merged = pd.merge(w1, w2)
 
-###If not same,  specify the key:
+### If not same,  specify the key:
 
 merged_all = pd.merge(merged, w3, left_on = "FULL NAME1", right_on = "FULL NAME2" )
 
-###Concatinate 
+### Concatinate 
 
 frames = [df1, df2]
 
 result = pd.concat(frames)
 
-###Create DF and add rows of data
+### Create DF and add rows of data
 
 qn = pd.DataFrame(columns=('BIN', 'Boro Code', 'Boro', 'House Number', 'Street Name', 'Address', 'Latitude', 'Longitude'))
 
@@ -210,39 +210,39 @@ qn.loc[1] = ['NA','NA','NA', 'NA','NA','NA', 'NA','NA']
 
 Note: Number of columns must match
 
-#Loops and Assignments
+# Loops and Assignments
 
-###Turn chain assignments off:
+### Turn chain assignments off:
 
 pd.set_option('chained_assignment', None)
 
-#Subsetting
+# Subsetting
 
 geoCodeCheck = geoCodeCheck[geoCode['Street Name'] == 'knickerbocker avenue']
 
-###Subset  streets bounded by left and right x coord using mask
+### Subset  streets bounded by left and right x coord using mask
 
 mask = (dfList['XCoord'] >= xy2[0]) & (dfList['YCoord'] <= xy1[0])
 
 dfList_subset = dfList.loc[mask]
 
-###Subset using a list (this removes all rows of data not in list):
+### Subset using a list (this removes all rows of data not in list):
 
 df = df[df['Name'].isin(nameList)]
 
 
-#Sort and reindex
+# Sort and reindex
 
-####Sort by high risk ranking and reindex
+#### Sort by high risk ranking and reindex
 
 export = export.sort_values(by = 'High Risk Ranking', ascending=False).reset_index(drop=False) 
 
-####Sort python list, from high to low:
+#### Sort python list, from high to low:
 
 sorted(ratio_list, reverse=True)
 
 
-####Sort and keep only those with duplicates
+#### Sort and keep only those with duplicates
 
 ids = dfInt["NODEID"]
 
@@ -256,31 +256,31 @@ ratio_list = sorted(ratio_list, key=itemgetter(1), reverse=True)
 
 
 
-#From List to Dataframe:
+# From List to Dataframe:
 
 df = pd.DataFrame(dfList, columns=['BIN', 'Boro', 'Address'])
 
-#Lists and Sets
+# Lists and Sets
 
-###Create a list
+### Create a list
 list_block = []
     
     for i in range(0, len(df2)):
         list_block.append(df2["Block"][i])
 
-###Create a list from dataframe column:
+### Create a list from dataframe column:
 
 dateList = df2['Date'].tolist()
 
    
-###Create a set from a list     
+### Create a set from a list     
     set_block = set(list_block)
   
-###Sort the set
+### Sort the set
     set_block = sorted(set_block)
 
 
-###Remove empty elements in list:
+### Remove empty elements in list:
 
 a = filter(None, a)
 
@@ -290,15 +290,15 @@ a=[1,"",3,1,3,2,1,1]
 
 a = ["NA" if x=="" else x for x in a]
 
-####Replaces empty elements with 'NA'
+#### Replaces empty elements with 'NA'
 
-#Splitting and String Comparison with Two Dataframes
+# Splitting and String Comparison with Two Dataframes
 
-###This splits house number with "-" into two columns
+### This splits house number with "-" into two columns
 
 location_df = df['h_no'].apply(lambda x: pd.Series(x.split(',')))
 
-###Want to know if address one in df1 matches df2, if so tag the address
+### Want to know if address one in df1 matches df2, if so tag the address
 
 *Create a list of matching addresses in the dataframes:*
 
@@ -318,29 +318,29 @@ for i in range(0, len(dfmn)):
         
         
 
-#Groupby 
+# Groupby 
 
-####Add the total leave hours per person in new column called 'Correct Duration Sum'
+#### Add the total leave hours per person in new column called 'Correct Duration Sum'
 
 
 lv['Correct Duration Sum'] = lv['Correct Duration'].groupby(lv['CityTime ID']).transform('sum')
 
-####Sums by BIN and then year and sums up all of the other numeric variables:
+#### Sums by BIN and then year and sums up all of the other numeric variables:
 
 qnG = qn.groupby(['BIN', 'Year']).sum()
 
-####Reset back to dataframe:
+#### Reset back to dataframe:
 
 qnG = qnG.add_suffix('_Count').reset_index()
 
 
-####Groupby, count number of jobs and sum all other variables:
+#### Groupby, count number of jobs and sum all other variables:
 
 dfG = (df.groupby('BIN_Number').agg({'Job_Number':'count', 'AHV_Grants': 'sum', 'Initial_Da':'sum', 'Additional':'sum'}).reset_index().rename(columns={'Job_Number':'Job_Number_count'}) )
 
-#Datetime
+# Datetime
 
-###Convert date into pandas datetime:
+### Convert date into pandas datetime:
 
 df['DATE_SCHEDULED'] = pd.to_datetime(df['DATE_SCHEDULED'])
 
@@ -355,7 +355,7 @@ diff = d.days
 
 diff = int(diff)
 
-###Subset with date time and masking:
+### Subset with date time and masking:
 
 start_time = str(lv["Start Time"][i].month) + '-' + str(lv["Start Time"][i].day) + '-' + str(lv["Start Time"][i].year)
  
@@ -365,9 +365,9 @@ mask = (wd['workdays'] >= start_time) & (wd['workdays'] <= end_time)
 
 wd_subset = wd.loc[mask]
 
-#Dataframe Math and Stats Calculations
+# Dataframe Math and Stats Calculations
 
-###Sum values in dataframe:
+### Sum values in dataframe:
 
 sum_trans = df3["Transaction Amount"].sum()
 
@@ -375,29 +375,29 @@ sum_trans = df3["Transaction Amount"].sum()
 
 df2["EucDistance"].min()
 
-###Summary stats, continuous vars only:
+### Summary stats, continuous vars only:
 
 df.describe().transpose()
 
-###Multiply all floats by 100 to convert into percent
+### Multiply all floats by 100 to convert into percent
 
-####Get datatypes first then convert
+#### Get datatypes first then convert
 
 dr.dtypes
 
 dr[dr.select_dtypes(include=['float']).columns] *= 100
 
-####Round all numbers in df to two decimal places:
+#### Round all numbers in df to two decimal places:
 
 dr = dr.round(2)
 
-#From dataframe to dictionary
+# From dataframe to dictionary
 
-####df with fields "bin" and "WallArea SqFt"
+#### df with fields "bin" and "WallArea SqFt"
 
 dwsDic = dwsG.set_index('bin')['WallArea SqFt'].to_dict()
 
-#Try
+# Try
 
     for i in range(0, len(dfdn)):
          print "terracot address", dfdn["AddressMatch"][i]
@@ -408,13 +408,13 @@ dwsDic = dwsG.set_index('bin')['WallArea SqFt'].to_dict()
 
 
 
-#Useful Websites:
+# Useful Websites:
 
-####12 Useful Pandas Commands
+#### 12 Useful Pandas Commands
 
 https://www.analyticsvidhya.com/blog/2016/01/12-pandas-techniques-python-data-manipulation/
 
-####Pivoting in Pandas:
+#### Pivoting in Pandas:
 
 http://pandas.pydata.org/pandas-docs/stable/reshaping.html
 
