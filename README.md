@@ -230,6 +230,10 @@ dfList_subset = dfList.loc[mask]
 
 df = df[df['Name'].isin(nameList)]
 
+### Or, remove all those in list (removes all items in the list):
+
+dpsub = dp[~dp['BIN'].isin(binList)]
+
 
 # Sort and reindex
 
