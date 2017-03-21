@@ -37,8 +37,6 @@ s1 = "3243 IRWIN AVENUE BRONX"
  
 s2 = "3253 IRWIN AVENUE BRONX"
 
-
-
 ratio =  SM(None, s1, s2).ratio()
 
 #### Returns a score based on similarity
@@ -62,6 +60,16 @@ else:
     print "False, not same person"
 
 #### This prints out True
+
+### Splitting strings based on capital letters in string:
+
+import re
+
+a = 'JohnHamilton'
+
+re.findall('[A-Z][^A-Z]*', a)
+
+#### Output is a list: ['John', 'Hamilton']
 
 ## Stripping Strings: 
 
