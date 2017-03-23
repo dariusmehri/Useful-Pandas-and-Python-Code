@@ -360,6 +360,11 @@ df['DATE_SCHEDULED'] = pd.to_datetime(df['DATE_SCHEDULED'])
 
 db["DATE_INSPECTION"] = db["DATE_INSPECTION"].apply(lambda x: x.date())
 
+### Remove date from datetime:
+
+df['Inspection Time'] = df["Inspection Time"].apply( lambda d : d.time() )
+
+
 ### Get the difference in days
 d = df2["Variance End Date"][j] - df2["Variance Start Date"][j]
 
