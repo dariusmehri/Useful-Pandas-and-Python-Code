@@ -135,6 +135,10 @@ text.rsplit(' ', 1)[0]
 
 df.isnull().sum()
 
+### Sum NaN by column:
+
+df["VEHICLE_NUMBER"].isnull().sum()
+
 ### By column name:
 
 df = df.drop('First Name_x', 1)
