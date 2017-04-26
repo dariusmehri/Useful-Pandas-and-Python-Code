@@ -254,6 +254,9 @@ df = df[df['Name'].isin(nameList)]
 
 dpsub = dp[~dp['BIN'].isin(binList)]
 
+### Drop all rows except for rows where two fields are equal:
+
+df2 = df[df['INSPECTION_ID'] == df["INSPECTION_ID.1"]]
 
 # Sort and reindex
 
