@@ -397,6 +397,18 @@ mask = (wd['workdays'] >= start_time) & (wd['workdays'] <= end_time)
 
 wd_subset = wd.loc[mask]
 
+### Print current date and time:
+
+import datetime
+
+import time
+
+ts = time.time()
+
+st = datetime.datetime.fromtimestamp(ts).strftime('%Y-%m-%d %H:%M:%S')
+
+print st
+
 # Dataframe Math and Stats Calculations
 
 ### Sum values in dataframe:
