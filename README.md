@@ -387,6 +387,10 @@ diff = d.days
 
 diff = int(diff)
 
+### Get the difference in hours:
+
+print pd.Timedelta(d["Next_Login"][0] - d["Crash_Time_EST"][0]).seconds / 3600.0
+
 ### Subset with date time and masking:
 
 start_time = str(lv["Start Time"][i].month) + '-' + str(lv["Start Time"][i].day) + '-' + str(lv["Start Time"][i].year)
