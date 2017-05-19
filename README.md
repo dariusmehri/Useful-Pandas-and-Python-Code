@@ -29,6 +29,12 @@ df["Notes"] = df["Notes"].map(str.lower)
 
 *Can also use .upper*
 
+### Create new column category based on string in another column:
+
+d["Type"] = ""
+
+d['Type'] = np.where(d['Inspector Dept'].str.contains("Enforcement", case=False, na=False), 'Enforcement', 'Development')
+
 ### Fuzzy logic string comparison:
 
 from difflib import SequenceMatcher as SM
