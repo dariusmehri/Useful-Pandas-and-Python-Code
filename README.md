@@ -31,9 +31,11 @@ df["Notes"] = df["Notes"].map(str.lower)
 
 ### Create new column category based on string in another column:
 
-d["Type"] = ""
-
 d['Type'] = np.where(d['Inspector Dept'].str.contains("Enforcement", case=False, na=False), 'Enforcement', 'Development')
+
+### Create new column based on split in string in another column:
+
+d["Inspector Department"] = d['Inspector Dept'].str.split().str[0]
 
 ### Fuzzy logic string comparison:
 
