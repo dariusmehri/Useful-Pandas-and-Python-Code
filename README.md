@@ -200,6 +200,10 @@ df = df.dropna()
 
 *this drops all rows with NaN*
 
+### Drop NaN based on row:
+
+df = df.dropna(subset = ['BIN'])
+
 ### Drop NaN using is finite (only works for numeric data):
 
 df = df[np.isfinite(df['House Number'])]
