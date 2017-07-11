@@ -391,6 +391,16 @@ X = X.reset_index(drop=False)
 
 df['DATE_SCHEDULED'] = pd.to_datetime(df['DATE_SCHEDULED'])
 
+### Convert string to datetime:
+
+start_date = str(1) + '-' + str(1) + '-' + str(2016)
+
+from dateutil import parser
+
+start_date = parser.parse(start_date)
+
+start_date = start_date.date()
+
 ### Remove time from datetime:
 
 db["DATE_INSPECTION"] = db["DATE_INSPECTION"].apply(lambda x: x.date())
