@@ -496,10 +496,13 @@ https://www.analyticsvidhya.com/blog/2016/01/12-pandas-techniques-python-data-ma
 
 http://pandas.pydata.org/pandas-docs/stable/reshaping.html
 
-#### Pivot with name, year, sum of variable:
+#### Pivot with name, year, sum of variable (creates index with name, colums are date, values are duration in hours):
 
 p = resultG.pivot_table(index='Name', columns='Month-Year', values='Duration Hours_Count')
 
-#### creates index with name, colums are date, values are duration in hours
+#### Pivot and sum values
+
+st = st.pivot_table(index='BIN Number', columns='Permit Sub Type',values='Value', aggfunc=np.sum)
+
 
 
