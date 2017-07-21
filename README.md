@@ -163,6 +163,10 @@ df = df.drop_duplicates(subset=['Address', 'Boro']).reset_index(drop=True)
 
 *drops rows where address and borough are the same*
 
+### Drop duplicates based on element in another column, this drops all rows of data except if value in INSPECTION_ID equals the value in INSPECTION_ID.1
+
+dn = dn[dn['INSPECTION_ID'] == dn["INSPECTION_ID.1"]]
+
 ### Just reset index
 
 df = df.reset_index(drop=True)
