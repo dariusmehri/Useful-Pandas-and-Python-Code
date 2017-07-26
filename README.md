@@ -183,6 +183,12 @@ dfn['Boro'] =  dfn['Boro'].str.replace('BRO', 'BROOKLYN')
 
 df = df.fillna(0)
 
+### Replace string in all columns:
+
+d = d.replace(["None"], [""]) 
+
+df = df.replace(['very bad', 'bad', 'poor', 'good', 'very good'], [1, 2, 3, 4, 5]) 
+
 ### Drop row based on element type:
 
 df = df[df["BORO"] != 0]
