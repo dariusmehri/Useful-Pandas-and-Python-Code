@@ -340,6 +340,10 @@ a = ["NA" if x=="" else x for x in a]
 
 #### Replaces empty elements with 'NA'
 
+# Create a list from list of lists:
+
+l = sum(l, [])
+
 # Splitting and String Comparison with Two Dataframes
 
 ### This splits house number with "-" into two columns
