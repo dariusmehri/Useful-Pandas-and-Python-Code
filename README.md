@@ -446,15 +446,9 @@ wd_subset = wd.loc[mask]
 
 ### Print current date and time:
 
-import datetime
+from datetime import datetime
+print str(datetime.now())
 
-import time
-
-ts = time.time()
-
-st = datetime.datetime.fromtimestamp(ts).strftime('%Y-%m-%d %H:%M:%S')
-
-print st
 
 # Dataframe Math and Stats Calculations
 
