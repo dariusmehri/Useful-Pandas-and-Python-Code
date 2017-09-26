@@ -340,9 +340,14 @@ a = ["NA" if x=="" else x for x in a]
 
 #### Replaces empty elements with 'NA'
 
-# Create a list from list of lists:
+### Create a list from list of lists:
 
 l = sum(l, [])
+
+### List intersections, produces list of common elements between list1 and list2
+
+x = list(set(list1).intersection(list2))
+
 
 # Splitting and String Comparison with Two Dataframes
 
