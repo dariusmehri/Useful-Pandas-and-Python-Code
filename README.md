@@ -348,6 +348,11 @@ l = sum(l, [])
 
 x = list(set(list1).intersection(list2))
 
+### Replace words or names in a list using a dictionary:
+
+words = flist
+
+final_string = ', '.join(str(nameDic.get(word, word)) for word in words)
 
 # Splitting and String Comparison with Two Dataframes
 
