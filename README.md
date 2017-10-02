@@ -499,6 +499,14 @@ di = {1: "A", 2: "B"}
 
 df = df.replace({"col1": di})
 
+
+### Creating flag using dictionaries, this creates a Y/N flag where Y is in flag if job number in column, N if not:
+
+dic_s = {'7398378':'Y', '7398310':'Y'}
+
+df['Flag'] = df['Job Number'].map(dic_s).fillna('N')
+
+
 # Try
 
     for i in range(0, len(dfdn)):
