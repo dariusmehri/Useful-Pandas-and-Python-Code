@@ -487,11 +487,17 @@ dr[dr.select_dtypes(include=['float']).columns] *= 100
 
 dr = dr.round(2)
 
-# From dataframe to dictionary
+# Dictionaries
 
-#### df with fields "bin" and "WallArea SqFt"
+### From dataframe to dictionary, df with fields "bin" and "WallArea SqFt"
 
 dwsDic = dwsG.set_index('bin')['WallArea SqFt'].to_dict()
+
+### Replace all values column based on dictionary:
+
+di = {1: "A", 2: "B"}
+
+df = df.replace({"col1": di})
 
 # Try
 
