@@ -354,6 +354,12 @@ words = flist
 
 final_string = ', '.join(str(nameDic.get(word, word)) for word in words)
 
+### Remove empty space in a list:
+
+name_list = ['ALEX PERA', ' ', 'VAL TOL']
+
+name_list = [x for x in name_list if x != ' ']
+
 # Splitting and String Comparison with Two Dataframes
 
 ### This splits house number with "-" into two columns
