@@ -217,6 +217,14 @@ df = df.dropna(subset = ['BIN'])
 
 df = df[np.isfinite(df['House Number'])]
 
+### Moving columns, this moves last column to first colum:
+
+cols = nodesGephi.columns.tolist()
+
+cols = cols[-1:] + cols[:-1]
+
+nodesGephi = nodesGephi[cols]
+
 # Merging data
 
 ### Simple merge, if keys in w1 and w2 are the same:
