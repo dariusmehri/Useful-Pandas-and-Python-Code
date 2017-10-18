@@ -14,6 +14,12 @@ df.dtypes
 ### Write csv without index:
 df.to_csv("...file_name.csv", index=False)
 
+# Installing packages from tar.gz files
+
+### Navigate to the directory containing the .tar.gz file from your command prompt and enter this command:
+
+pip install my-tarball-file-name.tar.gz
+
 # String
 
 ### Convert column to strings:
