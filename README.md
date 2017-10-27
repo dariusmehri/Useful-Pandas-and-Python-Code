@@ -368,6 +368,11 @@ words = flist
 
 final_string = ', '.join(str(nameDic.get(word, word)) for word in words)
 
+
+### Sort a list of strings, from largest to smallest:
+
+matchList.sort(key = lambda s: len(s), reverse=True )
+
 ### Remove empty space in a list:
 
 name_list = ['ALEX PERA', ' ', 'VAL TOL']
