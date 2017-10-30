@@ -379,6 +379,13 @@ name_list = ['ALEX PERA', ' ', 'VAL TOL']
 
 name_list = [x for x in name_list if x != ' ']
 
+# Append Dataframe
+
+all_data = pd.DataFrame()
+
+all_data = all_data.append(df,ignore_index=False)
+
+
 # Splitting and String Comparison with Two Dataframes
 
 ### This splits house number with "-" into two columns
