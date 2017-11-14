@@ -34,6 +34,10 @@ df["Notes"] = df["Notes"].map(str.lower)
 
 *Can also use .upper*
 
+### Strip out all punctuations in strings, including brackets:
+
+geoCodeAdd["STREET_NAME"] = geoCodeAdd["STREET_NAME"].str.replace('[^\w\s]','')
+
 ### Create new column category based on string in another column:
 
 d['Type'] = np.where(d['Inspector Dept'].str.contains("Enforcement", case=False, na=False), 'Enforcement', 'Development')
