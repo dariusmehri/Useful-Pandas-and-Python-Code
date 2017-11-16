@@ -320,7 +320,9 @@ from operator import itemgetter
 
 ratio_list = sorted(ratio_list, key=itemgetter(1), reverse=True)
 
+#### Sort columns by name:
 
+df = df.reindex_axis(sorted(df.columns), axis=1)
 
 # From List to Dataframe:
 
