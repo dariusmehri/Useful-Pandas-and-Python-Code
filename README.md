@@ -581,6 +581,6 @@ https://www.python-course.eu/list_comprehension.php
 
 http://www.secnetix.de/olli/Python/list_comprehensions.hawk
 
-
+https://www.analyticsvidhya.com/blog/2016/01/python-tutorial-list-comprehension-examples/
 
 
