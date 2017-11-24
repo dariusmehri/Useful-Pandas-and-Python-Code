@@ -575,4 +575,12 @@ p = resultG.pivot_table(index='Name', columns='Month-Year', values='Duration Hou
 st = st.pivot_table(index='BIN Number', columns='Permit Sub Type',values='Value', aggfunc=np.sum)
 
 
+#### List comprensions:
+
+https://www.python-course.eu/list_comprehension.php
+
+http://www.secnetix.de/olli/Python/list_comprehensions.hawk
+
+
+
 
