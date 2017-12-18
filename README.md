@@ -498,6 +498,21 @@ from datetime import datetime
 
 print str(datetime.now())
 
+### Plus or minus days in date range:
+
+insp_date = df["DATE_INSPECTION"][0]
+
+d = datetime.timedelta(days = 2)
+
+minus2 = insp_date - d
+
+plus2 = insp_date + d
+
+mask = (all_data2['Date'] >= minus2) & (all_data2['Date'] <= plus2)
+
+dfpm2 = all_data2.loc[mask]
+
+
 
 # Dataframe Math and Stats Calculations
 
