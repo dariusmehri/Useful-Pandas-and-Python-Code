@@ -346,7 +346,16 @@ dateList = df2['Date'].tolist()
   
 ### Sort the set
     set_block = sorted(set_block)
+    
+### Create a categorical variable based on items in list:
 
+frame = pd.DataFrame({'a' : ['the cat is blue', 'the sky is green', 'the dog is black']})
+
+mylist =['dog', 'cat', 'fish']
+
+pattern = '|'.join(mylist)
+
+frame["TF"] = frame.a.str.contains(pattern)
 
 ### Remove empty elements in list:
 
