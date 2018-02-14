@@ -343,6 +343,10 @@ dateList = df2['Date'].tolist()
    
 ### Create a set from a list     
     set_block = set(list_block)
+    
+### Removing any element with numbers from a list:
+
+text = [x for x in text if not any(c.isdigit() for c in x)] 
   
 ### Sort the set
     set_block = sorted(set_block)
