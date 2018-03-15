@@ -495,6 +495,10 @@ diff = int(diff)
 
 print pd.Timedelta(d["Next_Login"][0] - d["Crash_Time_EST"][0]).seconds / 3600.0
 
+### Create week number based on date, year, month and day are integers:
+
+df["Week Number"][i] = datetime.date(year, month, day).isocalendar()[1]
+
 ### Subset with date time and masking:
 
 start_time = str(lv["Start Time"][i].month) + '-' + str(lv["Start Time"][i].day) + '-' + str(lv["Start Time"][i].year)
