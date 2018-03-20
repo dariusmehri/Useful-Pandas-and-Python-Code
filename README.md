@@ -109,12 +109,12 @@ df["Address"] = df["Address"].map(str.strip)
 ### Or use loop and column names:
 col_names = sorted(list(df.columns.values))
 
-#convert all columns to string
 for i in range(0, len(col_names)):
+
     df[col_names[i]] = df[col_names[i]].astype(str)
 
-#strip white space from all columns
 for i in range(0, len(col_names)):
+
     df[col_names[i]] = df[col_names[i]].map(str.strip)
 
 ### Strip white spaces from leading and tailing edge in column
