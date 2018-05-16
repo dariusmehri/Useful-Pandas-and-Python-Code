@@ -409,6 +409,18 @@ name_list = [x for x in name_list if x != ' ']
 
 oList = sum(oList, [])
 
+# Map Function
+
+### Create a list of titles and last names:
+
+people = ['Dr. Christopher Brooks', 'Dr. Kevyn Collins-Thompson', 'Dr. VG Vinod Vydiswaran', 'Dr. Daniel Romero']
+
+def split_title_and_name(person):
+
+    return person.split()[0] + " " + person.split()[-1]
+
+list(map(split_title_and_name, people))
+
 # Append Dataframe
 
 all_data = pd.DataFrame()
