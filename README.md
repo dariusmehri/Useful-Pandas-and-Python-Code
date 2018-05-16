@@ -427,6 +427,20 @@ my_function = lambda a, b, c: a**3 + b**2 + c
 
 print my_function(2,3,4)
 
+# List comprehensions
+
+lst = []
+
+for i in range(10):
+
+    for j in range (10):
+    
+        lst.append(i*j)
+
+### Same as this list comprehension:
+
+lst = [i*j for i in range(10) for j in range(10)]
+
 # Append Dataframe
 
 all_data = pd.DataFrame()
@@ -636,7 +650,7 @@ p = resultG.pivot_table(index='Name', columns='Month-Year', values='Duration Hou
 st = st.pivot_table(index='BIN Number', columns='Permit Sub Type',values='Value', aggfunc=np.sum)
 
 
-#### List comprensions:
+#### List comprensions links:
 
 https://www.python-course.eu/list_comprehension.php
 
