@@ -409,7 +409,7 @@ name_list = [x for x in name_list if x != ' ']
 
 oList = sum(oList, [])
 
-# Map Function
+# Map and Lambda Functions
 
 ### Create a list of titles and last names:
 
@@ -420,6 +420,12 @@ def split_title_and_name(person):
     return person.split()[0] + " " + person.split()[-1]
 
 list(map(split_title_and_name, people))
+
+### Basic Lambda:
+
+my_function = lambda a, b, c: a**3 + b**2 + c
+
+print my_function(2,3,4)
 
 # Append Dataframe
 
