@@ -314,6 +314,12 @@ dpsub = dp[~dp['BIN'].isin(binList)]
 
 df2 = df[df['INSPECTION_ID'] == df["INSPECTION_ID.1"]]
 
+### Subset using boolean mask:
+
+only_gold = df[df['Gold'] > 0]
+
+Replaces numbers with NaN for countries that did not have a gold medal
+
 # Sort and reindex
 
 #### Sort by high risk ranking and reindex
