@@ -276,6 +276,12 @@ qn.loc[1] = ['NA','NA','NA', 'NA','NA','NA', 'NA','NA']
 
 Note: Number of columns must match
 
+# Transposing dataframe
+
+#### Switch columns and rows:
+
+df = df.T
+
 # Loops and Assignments
 
 ### Turn chain assignments off:
