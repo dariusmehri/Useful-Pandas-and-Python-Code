@@ -157,7 +157,11 @@ text = '272-276 Broadway New York NY 10007'
 
 text.rsplit(' ', 1)[0]
 
-# Drop Columns and Duplicates, Rename Columns and Elements
+# Columns, Drop Duplicates, Rename Columns and Elements, etc
+
+### Get unique values in columns:
+
+df["Variable"].unique
 
 ### Count the total NaN in dataframe:
 
