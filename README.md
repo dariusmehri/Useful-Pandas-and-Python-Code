@@ -505,6 +505,10 @@ qnG = qn.groupby(['BIN', 'Year']).sum()
 
 qnG = qnG.add_suffix('_Count').reset_index()
 
+#### Groupby using lambda, weight and quantity are columns in dataframe, suma up the multiplication of weight x quantity
+
+dfG = df.groupby('Category').apply(lambda df,a,b: sum(df[a] * df[b]), 'Weight (oz.)', 'Quantity'))
+
 
 #### Groupby, count number of jobs and sum all other variables:
 
