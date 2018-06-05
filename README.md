@@ -38,6 +38,10 @@ df["Notes"] = df["Notes"].map(str.lower)
 
 geoCodeAdd["STREET_NAME"] = geoCodeAdd["STREET_NAME"].str.replace('[^\w\s]','')
 
+### Remove numbers from string:
+
+df['Country'] = df['Country'].str.replace('\d+', '')
+
 ### Create new column category based on string in another column:
 
 d['Type'] = np.where(d['Inspector Dept'].str.contains("Enforcement", case=False, na=False), 'Enforcement', 'Development')
