@@ -526,6 +526,11 @@ X = pd.DataFrame(f)
 
 X = X.reset_index(drop=False)
 
+#### Groupby and choose max date:
+
+coG = coG.groupby(['BIN Number'], sort=False)['C of O Issue Date'].max()
+
+
 # Datetime
 
 ### Convert date into pandas datetime:
