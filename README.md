@@ -447,6 +447,16 @@ my_function = lambda a, b, c: a**3 + b**2 + c
 
 print my_function(2,3,4)
 
+# Creating dummy variables
+
+### First create dummy variables using the categorical variable in the dataframe, and then concatinate to original dataframe
+
+df = df[["Permit Number", "PermitType"]]
+
+jobtype_dummies = pd.get_dummies(df.PermitType, prefix='PermitType')
+
+df = pd.concat([df, jobtype_dummies], axis=1)
+
 # List comprehensions
 
 lst = []
