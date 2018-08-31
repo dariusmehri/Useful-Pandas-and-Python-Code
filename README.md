@@ -207,6 +207,10 @@ df = df.rename(columns={'Org.Level.4': 'org_level_4', 'Org.Level.4.Number': 'org
 
 dfn['Boro'] =  dfn['Boro'].str.replace('BRO', 'BROOKLYN')
 
+### Rename multiple elements
+
+df['Boro'] = df.borough.replace({'Manhattan':1,'Bronx':2,'Brooklyn':3,'Queens':4,'Staten Island':5})
+
 ### Fill NaN with zeros
 
 df = df.fillna(0)
