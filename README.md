@@ -42,6 +42,14 @@ geoCodeAdd["STREET_NAME"] = geoCodeAdd["STREET_NAME"].str.replace('[^\w\s]','')
 
 df['Country'] = df['Country'].str.replace('\d+', '')
 
+### Extract only the numbers from a column:
+
+df['number']=df['address'].str.extract('(^[0-9|-]*)')
+
+### Extract the charactes only from an address with house number:
+
+df['street']=df['address'].str.extract('(\s.+$)')
+
 ### Create new column category based on string in another column:
 
 d['Type'] = np.where(d['Inspector Dept'].str.contains("Enforcement", case=False, na=False), 'Enforcement', 'Development')
