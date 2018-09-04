@@ -183,6 +183,10 @@ df.isnull().sum()
 
 df["VEHICLE_NUMBER"].isnull().sum()
 
+### Sum NaN by all columns
+
+df.isnull().sum()
+
 ### By column name:
 
 df = df.drop('First Name_x', 1)
