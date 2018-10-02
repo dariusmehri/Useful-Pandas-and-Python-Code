@@ -593,6 +593,10 @@ diff = int(diff)
 
 print pd.Timedelta(d["Next_Login"][0] - d["Crash_Time_EST"][0]).seconds / 3600.0
 
+### Create time bins, morning, afternoon, evening:
+
+df2 = df2.assign(session=pd.cut(df2.DateTime.dt.hour,[0,6,12,18,24],labels=['Night','Morning','Afternoon','Evening']))
+
 ### Create week number based on date, year, month and day are integers:
 
 df["Week Number"][i] = datetime.date(year, month, day).isocalendar()[1]
