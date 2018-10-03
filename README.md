@@ -322,6 +322,10 @@ mask = (dfList['XCoord'] >= xy2[0]) & (dfList['YCoord'] <= xy1[0])
 
 dfList_subset = dfList.loc[mask]
 
+### Subset based on string in a column:
+
+df2 = df2[df2.Address.str.contains("WEST END AVE") == False]
+
 ### Subset using two elements in column:
 
 df = df[(df['closing_price'] >= 99) & (df['closing_price'] <= 101)]
