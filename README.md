@@ -708,6 +708,10 @@ http://pandas.pydata.org/pandas-docs/stable/reshaping.html
 
 p = resultG.pivot_table(index='Name', columns='Month-Year', values='Duration Hours_Count')
 
+#### Pivot where the values are strings (the default aggregates integers or floats):
+
+p = dfc3.pivot_table(index='RegistrationID', columns='Type', values='Name', aggfunc=lambda x: ' '.join(x))
+
 #### Pivot and sum values
 
 st = st.pivot_table(index='BIN Number', columns='Permit Sub Type',values='Value', aggfunc=np.sum)
