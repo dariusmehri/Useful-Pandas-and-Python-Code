@@ -669,6 +669,10 @@ dr = dr.round(2)
 
 dwsDic = dwsG.set_index('bin')['WallArea SqFt'].to_dict()
 
+### Mapping dictionaries (insert value of dictionary) into dataframe, lat is dataframe where key is the address
+
+df["lat"] = df["address"].map(lat)
+
 ### Replace all values column based on dictionary:
 
 di = {1: "A", 2: "B"}
