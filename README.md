@@ -587,6 +587,10 @@ df['Inspection Time'] = df["Inspection Time"].apply( lambda d : d.time() )
 
 
 ### Get the difference in days
+df['Difference'] = (df["hearing_date"] - df["ticket_issued_date"]).dt.days
+
+OR
+
 d = df2["Variance End Date"][j] - df2["Variance Start Date"][j]
 
 diff = d.days
