@@ -169,6 +169,18 @@ text = '272-276 Broadway New York NY 10007'
 
 text.rsplit(' ', 1)[0]
 
+# Regular Expressions
+
+### With list comprehension
+
+import re
+
+[w for w in text8 if re.search('@[A-Za-z0-9_]+', w)]
+
+[]: matches a set of characters \n
+[a-z]: matches a character in the range a to z 
+
+
 # Columns, Drop Duplicates, Rename Columns and Elements, etc
 
 ### Get unique values in columns:
