@@ -171,14 +171,13 @@ text.rsplit(' ', 1)[0]
 
 # Regular Expressions
 
-### With list comprehension
+### With list comprehension, finds all words in a list that begin with '@':
 
 import re
 
 [w for w in text8 if re.search('@[A-Za-z0-9_]+', w)]
 
-[]: matches a set of characters /n
-[a-z]: matches a character in the range a to z 
+[]: matches a set of characters, [a-z]: matches a character in the range a to z, [^abc]: matches a character not a, b, or c, [a|b]: matches a or b where a and b are strings
 
 
 # Columns, Drop Duplicates, Rename Columns and Elements, etc
