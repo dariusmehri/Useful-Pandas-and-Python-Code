@@ -177,7 +177,7 @@ import re
 
 [w for w in text8 if re.search('@[A-Za-z0-9_]+', w)]
 
-[]: matches a set of characters \n
+[]: matches a set of characters /n
 [a-z]: matches a character in the range a to z 
 
 
