@@ -472,6 +472,11 @@ def split_title_and_name(person):
 
 list(map(split_title_and_name, people))
 
+### Create new column (dummy variable) based on value in another column:
+
+df3['Target'] = df.WAITING_TIME.map( lambda x: 1 if x >= 1800 else 0)
+
+
 ### Basic Lambda:
 
 my_function = lambda a, b, c: a**3 + b**2 + c
