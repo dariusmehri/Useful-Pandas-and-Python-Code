@@ -44,7 +44,7 @@ df['Country'] = df['Country'].str.replace('\d+', '')
 
 ### Extract only the numbers from a column:
 
-df['number']=df['address'].str.extract('(^[0-9|-]*)')
+df['LICENSE_NO']= df['LICENSE_NO'].str.extract('(\d+)')
 
 ### Extract the charactes only from an address with house number:
 
